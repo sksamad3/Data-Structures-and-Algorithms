@@ -17,7 +17,7 @@ using namespace std;
 */
 
 // This will print the top half pyramid 
-void pattern_7(int n){
+void upper_Half(int n){
         for(int i = 1 ; i<=n ; i++){
 
             // Spaces 
@@ -34,7 +34,7 @@ void pattern_7(int n){
     }
 
     // This will print the lower pyramid 
-    void pattern_8(int n){
+    void lower_Half(int n){
         // Prints spaces 
         for(int i = 1 ; i<=n ; i++){
             for(int j = 1 ; j<=(i-1); j++){
@@ -50,8 +50,8 @@ void pattern_7(int n){
 }
     // This will combine the upper and lower pyramids  
     void pattern_9(int n){
-        pattern_7(n); 
-        pattern_8(n); 
+        upper_Half(n);
+        lower_Half(n);
     }
 int main(){
     int n ; 

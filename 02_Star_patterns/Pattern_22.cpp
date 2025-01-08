@@ -31,10 +31,10 @@ using namespace std;
 */
 
     void pattern_22(int n){
-        // Outer Matrix
+        // Outer loop for rows
         for(int i = 0 ; i<(2*n-1); i++){
 
-            // Inner Mattrix
+            // Inner loop for columns
             for(int j = 0 ; j<(2*n-1); j++){
 
                 // Calculating the distance from all sides 
