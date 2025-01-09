@@ -183,6 +183,6 @@ int main(){
     // size_of_vector(myv);
     // swap_two_vectors(myv,myv2);
     //clear_vector(myv2);
-    check_empty_vector(myv2);
+    //check_empty_vector(myv2);
     return 0;
 }
