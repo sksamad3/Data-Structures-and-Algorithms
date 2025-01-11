@@ -70,6 +70,7 @@ void size_of_stack(){
     st.push(54); 
     st.push(56); 
     st.push(7); 
+    
 }
 int main(){
     //check_top();
