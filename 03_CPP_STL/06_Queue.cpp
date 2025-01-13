@@ -10,7 +10,6 @@ using namespace std;
   3. Access    : front()  and back() 
   4. Size      : size()
   5. chk if empty : empty()
-
 */
 
 void create_Queue(){
