@@ -12,7 +12,7 @@ using namespace std;
     /*Set have two properties
     1. Stores everything in sorted order
     2. No duplicates allowed 
-    and its enough it also allows you to sequentially traverse the map .*/
+    and its enough it also allows you to sequentially traverse the set .*/
 
 void create_Set(){
 
@@ -95,7 +95,7 @@ void erase_elements(){
     mst.erase(it); // Deletes 6 from the set .
 
 
-    // 3. Erasing a rangle of elements from the set 
+    // 3. Erasing a range of elements from the set 
     set<int> mst2 = {1,4,5,6,7,9,8,10,20,3,2,54};
 
     // for selecting range of elements first sort the set and then the elements will be selected 
@@ -108,6 +108,25 @@ void erase_elements(){
     end = prev(end , 3);   // points to 10  but end is not included so 9 will be considered if u erased 
 
     mst2.erase(start,end); // Set : 1 10 20 54
+
+    // 4. Finding and then deleting the elements 
+    auto ele = mst2.find(6);
+    mst2.erase(ele);
+
+    // 5. Finding the elements and deleting all the elements between them. 
+    set<int> myset = {4, 10 , 78, 89 ,54 , 43} ; 
+
+    auto start = myset.find(4);
+    auto end = myset.find(54);
+
+    // first the set will be sorted 
+    // 4 , 10 , 43 ,54 ,78 , 89 
+    // start iterator will be at 4 
+    // end iterator will be at 54 
+    // so elements from 4 to 89 (which is just before 54); 
+
+    myset.erase(start, end); // 4 , 10 , 78 , 89 will be deleted 
+    
 }
 void size_of_set(){
     set<int> mst = {1,4,5,6,7,9,8,10,20,3,2,54};
@@ -159,7 +178,7 @@ void clear_set(){
     if(mst.empty()) cout<<"Set is empty "; 
     else cout<<"Set is not empty "; 
 }
-void swap_set(){
+void swap_sets(){
     set<int> odds = {1 ,3 ,5,7,9};
     set<int> evens = {2,4,6,8};
 
@@ -175,15 +194,15 @@ void swap_set(){
 }
 
 int main(){
-    //create_Set();
-    // insert_element_in_diff_ways(); 
-    // erase_elements(); 
-    // size_of_set(); 
-    // check_if_empty_set(); 
-    // find_element_in_set(); 
-    // count_elements_in_set(); 
-    // clear_set();
-    swap_set(); 
+    create_Set();
+     insert_element_in_diff_ways(); 
+     erase_elements(); 
+     size_of_set(); 
+     check_if_empty_set(); 
+     find_element_in_set(); 
+     count_elements_in_set(); 
+     clear_set();
+    swap_sets(); 
 
     return 0;
 }
