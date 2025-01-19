@@ -102,42 +102,37 @@ void erase_elements(){
 
 
 
-    // 3. Erasing a range of elements from the set 
-    unordered_set<int> ust2 = {1,4,5,6,7,9,8,10,20,3,2,54};
 
-    //Unordered sets doesn't allow selecting a range of elements because they are stored in sequentially 
-    // For doing this we have to manually traverse the unordered set 
-
-
-    // 1 4 5 6 7 9 8 10 20 3 2 54
-    auto en = ust2.end(); 
-    en = prev(en,4); // points to 20 
-    unordered_set<int>::iterator ist = ust2.begin(); 
-
-    // This will erase from 1 till 20 one by one
-    for(auto ist = ust2.begin(); ist!=en; ist++){
-        ust2.erase(ist); 
-    }
-    cout<<endl; 
-    cout<<"Uset2 : "; 
-    for(auto it : ust2) cout<<it <<" "; 
-
-
-
-    // 4. Finding and then deleting the elements 
+    // 3. Finding and then deleting the elements 
 // Unordered set ust2 : 1 4 5 6 7 9 8 10 20 3 2 54
-    
-    //auto ele = ust2.find(6);
-    //ust2.erase(ele); // Erases 6 from the unordered set 
+    unordered_set<int> ust2 = {1,4,5,6,7,9,8,10,20,3,2,54};
+    auto ele = ust2.find(6);
+    ust2.erase(ele); // Erases 6 from the unordered set 
 
 
 
 
 
-    // 5. Finding the elements and deleting all the elements between them. 
-    unordered_set<int> armstrongs = {4, 10 , 78, 89 ,54 , 43} ; 
-    // Deleting a range of elements directly from an unordered set is not possible , we need to first set the starting iterator and then using a loop traverse till the end position you like and then keep deleting them inside the loop.
-    
+    // 4. Erasing a range of elements from the set . 
+    unordered_set<int> armstrongs = {4, 10 , 78, 89 ,54 , 43} ;
+    // Unordered sets doesn't allow selecting a range of elements because they are stored in random order based on hash value 
+    // Deleting a range of elements directly is not possible , 
+    // If you want to erase elements between two values (e.g., between 4 and 20), you 
+    // can iterate through the unordered_set and use a condition to erase them:
+
+    // Define the range you want to erase (e.g., values between 4 and 20 inclusive)
+    int lower = 4, upper = 20;
+
+    // Iterate and erase elements within the range
+    for (auto it = ust2.begin(); it != ust2.end(); ){
+        if(*it >= lower && *it <= upper){
+            it = ust2.erase(it); // Erases the current element and updates the iterator 
+            }
+        else{
+            ++it; // Move to the next element
+            }
+    }
+
 }
 void size_of_unorderedset(){
     unordered_set<int> ust = {1,4,5,6,7,9,8,10,20,3,2,54};

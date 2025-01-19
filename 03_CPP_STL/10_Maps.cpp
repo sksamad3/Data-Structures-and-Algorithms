@@ -1,6 +1,25 @@
 #include<iostream>
 #include<map>
 #include<bits/stdc++.h>
+/*
+        Maps 
+    1. Map is a data structure in C++ STL which stored data in key value pairs , a value is associated with each key 
+    2. It stores unique keys but allows duplicate values. two unique keys can have same values 
+    3. key can be of any data type and value also can be of any data type
+    example : key can be of pair data structure and value can be single integer or a string .
+    4. It stores the data in the sorted order order by keys
+    5. It is an associative container stores data in key value pairs
+    6. Maps are implemented using balanced binary search trees (like a red-black tree)
+    7. Search, insert, and delete operations have O(log n) time complexity.
+    8. It alows sequential access / traversal 
+    9. Swap , size , clear all rest functions are same in map 
+*/
+
+/*
+    1. Stores in sorted order 
+    2. Unique keys 
+    3. stores in key-value pairs 
+*/
 
 using namespace std;
 void create_Maps(){
@@ -23,6 +42,8 @@ void insert_elements_to_map(){
         cout<<it.first <<"  | "<<it.second<<endl; 
     }
 
+    
+
 
     // 2. Inserting using insert()
 
@@ -32,6 +53,12 @@ void insert_elements_to_map(){
     mp2.insert({2,64}); 
     mp2.insert({3,100}); 
     mp2.insert({4,231});
+
+
+    // 3. We can also modify the values directly using random access 
+    mp2[3] = 153;
+
+
 }
 void map_of_pairs(){
     map<pair<int,int>,int> mp; 
@@ -63,9 +90,36 @@ void access_elements_in_maps(){
     auto key = mp.find(3) ;
     cout<<"Key : "<<key->first <<" " <<"Value : "<<key->second; 
 }
+void erasing_elements(){
+    map<int,int>mp; 
+
+    mp.emplace(0,34); 
+    mp.emplace(1,23);
+    mp.emplace(2,64); 
+    mp.emplace(3,100); 
+    mp.emplace(4,231);
+
+    mp.erase(1);  // Removes the key-value pair with key 1
+}
+void find_elements(){
+     map<int,int>mp; 
+
+    mp.emplace(0,34); 
+    mp.emplace(1,23);
+    mp.emplace(2,64); 
+    mp.emplace(3,100); 
+    mp.emplace(4,231);
+    
+    auto it = mp.find(3); // Returns an iterator to key 3 if found, or `map.end()` if not
+    cout<<"The value at 3 is : "<<it->second;  // it->second returns the value of the key 
+
+}
+
 int main(){
-    // create_Maps(); 
-    // insert_elements_to_map(); 
+    /* create_Maps(); 
+    insert_elements_to_map(); 
     access_elements_in_maps(); 
+    erasing_elements();*/ 
+    find_elements(); 
     return 0;
 }
