@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+/*
+    Multimaps:
+1. Duplicate keys allowed: Multiple entries with the same key are allowed.
+2. Key-value pairs: Each element is a key-value pair, just like a map.
+3. orted order: Keys are automatically sorted in ascending order (by default) based on the comparator (like std::less).
+4. Implementation: Internally implemented as a balanced binary search tree, like map.
+5.  Insertions, deletions, and searching take O(log n) time.
+6. No direct access: Unlike map[key], you cannot use the subscript operator [] to access or modify elements.
+*/
+
+
+        +-----------------------+----------------------+----------------------+
+        |       Feature         |         map          |      multimap        |
+        +-----------------------+----------------------+----------------------+
+        | Keys                  | Unique               | Duplicates allowed   |
+        | Access using []       | Yes                  | No                   |
+        | Order                 | Sorted               | Sorted               |
+        | Use case              | One-to-one mapping   | One-to-many mapping  |
+        +-----------------------+----------------------+----------------------+
+
+
+int main(){
+    
+    return 0;
+}

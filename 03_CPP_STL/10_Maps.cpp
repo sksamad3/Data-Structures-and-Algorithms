@@ -116,10 +116,10 @@ void find_elements(){
 }
 
 int main(){
-    /* create_Maps(); 
+    create_Maps(); 
     insert_elements_to_map(); 
     access_elements_in_maps(); 
-    erasing_elements();*/ 
+    erasing_elements(); 
     find_elements(); 
     return 0;
 }

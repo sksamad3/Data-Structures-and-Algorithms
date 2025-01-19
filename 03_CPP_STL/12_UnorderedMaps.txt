@@ -1,0 +1,55 @@
+Here are the key features of unordered_map in short:
+
+1. Unique Keys: Stores key-value pairs with unique keys.
+2. No Order: Elements are not stored in any specific order (unordered).
+3. Fast Access: Provides average constant time (O(1)) for access, insert, and delete operations.
+4. Hash Table: Uses hash tables internally to store elements.
+5. No Duplicate Keys : Does not allow duplicate keys.
+6. No Direct Insertion with `[]` Operator**: You cannot insert new key-value pairs directly using the `[]` operator like in `map`.
+
+
++-------------------------+--------------------------+-------------------------------+
+| Feature                 | map                      | unordered_map                 |
++-------------------------+--------------------------+-------------------------------+
+| Key Uniqueness          | Unique keys              | Unique keys                   |
+| Order                   | Elements sorted by keys  | Elements unordered            |
+| Underlying Data Structure| Red-Black Tree          | Hash Table                    |
+| Time Complexity         | O(log n) for insert,     | O(1) average for insert,      |
+|                         | search, erase            | search, erase                 |
+| Access via `[]`         | Yes (for both access and | Yes (for access, insertion    |
+|                         | insert)                  | via insert or emplace)        |
+| Memory Usage            | Higher due to tree       | Lower due to hash table       |
+|                         | structure                | structure                     |
+| Iterator Type           | Bidirectional iterator   | Forward iterator              |
+| Duplicate Keys          | Not allowed              | Not allowed                   |
+| Best Use Case           | When order matters       | When fast access is required, |
+|                         |                          | order doesn't matter          |
++-------------------------+--------------------------+-------------------------------+
+
+
+
+
+
+
+
+                                            Maps vs Multimaps vs Unordered mpas 
+
++-------------------------+--------------------------+--------------------------+--------------------------+
+| Feature                 | map                      | multimap                 | unordered_map            |
++-------------------------+--------------------------+--------------------------+--------------------------+
+| Key Uniqueness          | Unique keys              | Duplicates allowed       | Unique keys              |
+| Order                   | Sorted by key            | Sorted by key            | Unordered                |
+| Underlying Data Structure| Red-Black Tree          | Red-Black Tree           | Hash Table               |
+| Time Complexity         | O(log n) for insert,     | O(log n) for insert,     | O(1) average for insert, |
+|                         | search, erase            | search, erase            | search, erase            |
+| Access via `[]`         | Yes (for both access and | No                       | Yes (for access, insert) |
+|                         | insert)                  |                          | via insert or emplace    |
+| Memory Usage            | Higher due to tree       | Higher due to tree       | Lower due to hash table  |
+|                         | structure                | structure                | structure                |
+| Iterator Type           | Bidirectional iterator   | Bidirectional iterator   | Forward iterator         |
+| Duplicate Keys          | Not allowed              | Allowed                  | Not allowed              |
+| Best Use Case           | When order matters       | When you need to store   | When fast access is      |
+|                         |                          | multiple values for      | required and order       |
+|                         |                          | the same key             | doesn't matter           |
++-------------------------+--------------------------+--------------------------+--------------------------+
+
