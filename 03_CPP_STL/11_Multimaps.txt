@@ -1,7 +1,4 @@
-#include<iostream>
-using namespace std;
 
-/*
     Multimaps:
 1. Duplicate keys allowed: Multiple entries with the same key are allowed.
 2. Key-value pairs: Each element is a key-value pair, just like a map.
@@ -22,7 +19,3 @@ using namespace std;
         +-----------------------+----------------------+----------------------+
 
 
-int main(){
-    
-    return 0;
-}
