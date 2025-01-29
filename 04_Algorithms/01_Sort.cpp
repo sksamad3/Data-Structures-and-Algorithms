@@ -119,6 +119,14 @@ void next_permuations_of_a_string(){
         cout<<str<<endl; 
     }
 }
+void find_maximum_element(int arr[] , int size_arr){
+    int maxi = *max_element(arr,arr+size_arr);
+    cout<<"Maximum element in array : "<<maxi<<endl;
+
+    int mini = *min_element(arr, arr+size_arr); 
+    cout<<"Minimum elemet in array : "<<mini<<endl;
+}
+
 int main(){
     //1. Sorting the entire array 
     int a[] = {1,5 , 3, 2};
@@ -143,7 +151,13 @@ int main(){
     //using_builtin_popcount(); 
 
 
-    next_permuations_of_a_string(); 
+    //next_permuations_of_a_string();
+
+
+
+    int arr1[] = {1 , 10 , 5 , 6};
+    int size_arr1 = 4; 
+    find_maximum_element(arr1, 4);
 
     return 0;
 }
