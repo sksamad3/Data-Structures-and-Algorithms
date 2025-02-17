@@ -6,17 +6,17 @@ using namespace std;
    
 */
 
-void print_count(int i , int n){
-    if(i<1) return ;
+void print_count(int n){
+    if(n<1) return ; 
 
-    print_count(i-1,n);
-    cout<<i<<" "; 
+    print_count(n-1); 
+    cout<<n <<" " ; 
 }
 int main(){
     int n ; 
-    cout<<"Enter a number : "; 
-    cin>>n ;
+    cout<<"Enter a number : "  ; 
+    cin>>n ; 
 
-    print_count(n , n); 
+    print_count(n) ; 
     return 0;
 }
