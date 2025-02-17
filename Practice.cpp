@@ -1,7 +1,9 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
+void fibonacci_series(int n ){
 
+}
 void print_All_Divisors(int n){
     vector<int> v1 ; 
     for(int i = 1 ; i<=sqrt(n) ; i++){
@@ -18,7 +20,6 @@ void print_All_Divisors(int n){
     cout<<"Divisors of "<<n <<" are : "; 
     for(auto it : v1) cout<<it<<" "; 
 }
-
 void print_All_Divisors_Recursion(int i , int n){
     
     // Base case 
@@ -36,8 +37,6 @@ void print_All_Divisors_Recursion(int i , int n){
 
     print_All_Divisors_Recursion(i+1, n); 
 }
-
-
 bool check_Palindrome_String(int i , string s){
     // Base case 
     if(i >= s.size()/2) return true ; 
@@ -63,6 +62,10 @@ int main(){
     cout<<"Enter a string : "; 
     cin>>s; 
 
+
+
+
+
     bool res = check_Palindrome_String(0,s);
     if(res == 0 )  cout<<s<<" is not a palindrome string"; 
     else cout<<s <<" is a palindrome string";*/
@@ -75,11 +78,21 @@ int main(){
         cout<<it<<" "; 
     }*/
 
-    int n ; 
+
+
+    /*int n ; 
     cout<<"Enter a number : " ; 
     cin>>n ; 
 
-   print_All_Divisors_Recursion(1 , n) ;
+   print_All_Divisors_Recursion(1 , n) ;*/
    
+
+
+
+
+   int n ; 
+   cout<<"Enter a number : "; 
+   cin>>n ;
+   fibonacci_series(n); 
     return 0;
 }
