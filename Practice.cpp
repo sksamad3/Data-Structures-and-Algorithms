@@ -1,9 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-void fibonacci_series(int n ){
 
-}
 void print_All_Divisors(int n){
     vector<int> v1 ; 
     for(int i = 1 ; i<=sqrt(n) ; i++){
