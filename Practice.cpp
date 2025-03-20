@@ -55,7 +55,7 @@ using namespace std;
         }
     }*/
 
-    void merge(int arr[] , int low ,int mid ,  int high){
+    /*void merge(int arr[] , int low ,int mid ,  int high){
 
         vector<int> temp ; 
         int left  = low ; 
@@ -98,7 +98,34 @@ using namespace std;
 
         merge(arr , low , mid , high); 
     }
+*/
 
+int partition(int arr[] , int low , int high){
+    int pivot  = arr[low];
+    int i = low ; 
+    int j = high; 
+
+    while(i < j){
+
+        while(arr[i]<=pivot && i <= high-1){
+            i++;
+        }
+        while(arr[j] > pivot && j>=low+1){
+            j--; 
+        }
+
+        if(i<j) swap(arr[i] , arr[j]);
+    }
+    swap(arr[low] , arr[j]);
+    return j ; 
+}
+void quick_Sort(int arr[] , int low , int high){
+    if(low < high){
+        int partition_Index = partition(arr , low , high);
+        quick_Sort(arr, low , partition_Index-1);
+        quick_Sort(arr, partition_Index+1 , high); 
+    }
+}
 
 int main(){
     /*
@@ -201,8 +228,10 @@ for(int i = 0  ; i<s.size() ; i++){
         cout<<it <<" " ; 
     }
 */
+//-------------------------------------------------------------------------------------------------------
 
-
+    /*
+    // Function to be called : merge_Sort();
     cout<<"Merge Sort "<<endl; 
 
     int n ; 
@@ -219,6 +248,24 @@ for(int i = 0  ; i<s.size() ; i++){
     cout<<"Array : "; 
     for(auto it : arr){
         cout<<it<<" "; 
+    }*/
+
+
+    int n ; 
+    cout<<"Enter the size of array : "; 
+    cin>>n ; 
+
+    int arr[n] ; 
+    for(int i = 0 ; i< n ; i++){
+        cout<<"Enter a number : ";
+        cin>>arr[i];
+    }
+
+    quick_Sort(arr , 0 , n-1);
+
+    cout<<"Array : "; 
+    for(auto it : arr){
+        cout<<it<<" ";
     }
     return 0;
 }
