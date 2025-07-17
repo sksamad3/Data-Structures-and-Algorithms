@@ -1,0 +1,46 @@
+Basic Skeleton of Program 
+- User Input 
+- endl , cout<< , cin>> 
+
+Data Types 
+1. int , long , long long ,  float , double . 
+2. string , getline() 
+3. char 
+
+int -                -10^9  to 10^9 
+long -               -10^12 to 10^12 
+long long            -10^18 to 10^18 
+
+
+Conditionals 
+1. if block 
+2. if-else block 
+3. nested if block 
+4. switch-case 
+
+
+Arrays 
+- Create arrays
+- Add values to elements in arrays
+- Print the element of arrays 
+- Array elements are stored in consecutive memory blocks but we are not sure about where it will be stored 
+
+Strings 
+- Create strings 
+- .size() function to calculate length of string 
+- modify the characters of strings 
+
+Loops 
+- for loop 
+- while loop 
+- do while loop 
+
+Functions 
+- void function
+- function returning a value 
+- parameterized function 
+- non - parameterized function 
+
+
+Patterns 
+22 Patterns using nested loops 
